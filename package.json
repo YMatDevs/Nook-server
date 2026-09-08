@@ -1,0 +1,27 @@
+{
+  "name": "nook-server",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/YMatDevs/Nook-server#readme",
+  "bugs": {
+    "url": "https://github.com/YMatDevs/Nook-server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YMatDevs/Nook-server.git"
+  },
+  "author": "Yash Mathur",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}
