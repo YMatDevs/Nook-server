@@ -1,12 +1,16 @@
 
 
 import { Router } from "express";
+import { create } from "./users.controller.js";
+import multer from "multer";
+
+const mul = multer();
 
 
 const router = Router();
 
 
-router.get('/create', );
+router.post('/', mul.none(), create);
 
 
 export default router;

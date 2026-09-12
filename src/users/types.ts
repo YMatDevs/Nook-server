@@ -5,12 +5,10 @@ export type email = string;
 export type password = string;
 export type user_name = string;
 
+import type { InferOutput } from "valibot";
+import { UserSchema, NewUserSchema } from "./validation.js";
 
-export type User = {
-    user_id: user_id,
-    user_name: user_name,
-    email: email,
-    password: password,
-}
+export type User = InferOutput<typeof UserSchema>;
 
-export type NewUser = Omit<User, 'user_id'>;
+export type NewUser = InferOutput<typeof NewUserSchema>;
+

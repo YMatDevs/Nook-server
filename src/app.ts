@@ -1,16 +1,18 @@
 // Imports
 import express, { type Express, type Request, type Response } from 'express';
+import morgan from 'morgan';
 
 import UserRoutes from './users/users.route.js';
 
 const app: Express = express();
 
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(morgan('dev'));
 
-app.use('/user', UserRoutes);
 
-
-
+app.use('/users', UserRoutes);
 
 
 
